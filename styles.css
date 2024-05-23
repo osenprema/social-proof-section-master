@@ -1,0 +1,305 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'League Spartan';
+  src: url("./assets/fonts/LeagueSpartan-VariableFont_wght.ttf"); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'League Spartan';
+  font-size: 15px; }
+
+/* 375 × 667 (medium mobile) */
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url("./assets/images/bg-pattern-top-mobile.svg"), url("./assets/images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right bottom;
+  background-attachment: fixed; }
+
+main {
+  width: 70vw;
+  margin: 30px auto; }
+  main .main__top {
+    display: flex;
+    flex-direction: column; }
+    main .main__top .top__header {
+      text-align: center; }
+      main .main__top .top__header h1 {
+        font-size: 2rem;
+        color: #502050; }
+      main .main__top .top__header p {
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #937b92;
+        margin-top: 10px; }
+    main .main__top .top__rates {
+      padding: 25px 0 10px; }
+      main .main__top .top__rates div {
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px 0 2px 0;
+        margin-bottom: 10px;
+        background-color: #f7f2f7; }
+        main .main__top .top__rates div img {
+          width: 12px; }
+        main .main__top .top__rates div p {
+          font-size: 0.7rem;
+          font-weight: 700;
+          margin: 6px;
+          color: #502050; }
+  main .main__bottom {
+    display: flex;
+    flex-direction: column; }
+    main .main__bottom .bottom__buyer {
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: 10px;
+      color: white;
+      background-color: #502050; }
+      main .main__bottom .bottom__buyer .buyer__data {
+        display: flex;
+        align-items: center; }
+        main .main__bottom .bottom__buyer .buyer__data img {
+          width: 25px;
+          border-radius: 50%; }
+        main .main__bottom .bottom__buyer .buyer__data .data__name {
+          font-size: 0.45rem;
+          margin-left: 15px; }
+          main .main__bottom .bottom__buyer .buyer__data .data__name h2 {
+            margin-top: 3px;
+            color: #ee68a4; }
+      main .main__bottom .bottom__buyer p {
+        font-size: 0.7rem;
+        line-height: 1.5;
+        margin-top: 20px; }
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  color: #502050;
+  margin-bottom: 15px;
+  display: none; }
+
+.attribution a {
+  color: #ee68a4;
+  text-decoration: none; }
+
+/* 720 × 1280 (large mobile) */
+@media screen and (min-width: 720px) {
+  main {
+    margin-top: 70px; }
+    main .main__top .top__header h1 {
+      font-size: 3rem; }
+    main .main__top .top__header p {
+      font-size: 1.6rem;
+      margin-top: 20px; }
+    main .main__top .top__rates div img {
+      width: 20px; }
+    main .main__top .top__rates div p {
+      font-size: 1.5rem; }
+    main .main__bottom .bottom__buyer {
+      padding: 30px;
+      margin-top: 14px; }
+      main .main__bottom .bottom__buyer .buyer__data img {
+        width: 40px; }
+      main .main__bottom .bottom__buyer .buyer__data .data__name {
+        font-size: 0.8rem;
+        margin-left: 30px; }
+      main .main__bottom .bottom__buyer p {
+        font-size: 1.3rem; }
+
+  .attribution {
+    display: block; } }
+/* Mobiles in landscape position  */
+@media screen and (min-width: 668px) and (max-width: 1280px) and (orientation: landscape) {
+  body {
+    height: 100vh;
+    background-image: url("./assets/images/bg-pattern-top-desktop.svg"), url("./assets/images/bg-pattern-bottom-desktop.svg"); }
+
+  main {
+    width: 85vw;
+    height: 90vh; }
+    main section {
+      height: 50%; }
+    main .main__top {
+      padding: 20px 0;
+      flex-direction: row; }
+      main .main__top .top__header {
+        width: 50%;
+        text-align: left; }
+        main .main__top .top__header h1 {
+          font-size: 3rem;
+          padding-right: 30%; }
+        main .main__top .top__header p {
+          font-size: 1.3rem; }
+      main .main__top .top__rates {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+        main .main__top .top__rates div:not(.rates__stars) {
+          width: 85%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 0; }
+          main .main__top .top__rates div:not(.rates__stars) p {
+            margin-left: 20px; }
+        main .main__top .top__rates :nth-child(2) {
+          align-self: center; }
+        main .main__top .top__rates :nth-child(3) {
+          align-self: end; }
+    main .main__bottom {
+      flex-direction: row;
+      gap: 25px; }
+      main .main__bottom :nth-child(2) {
+        align-self: center; }
+      main .main__bottom :nth-child(3) {
+        align-self: end; }
+      main .main__bottom .bottom__buyer {
+        margin: 0 0 30px;
+        height: 70%; }
+        main .main__bottom .bottom__buyer .buyer__data .data__name {
+          margin-left: 15px; }
+        main .main__bottom .bottom__buyer p {
+          font-size: 1.1rem; } }
+/* 1366 × 768 (medium laptop) */
+@media screen and (min-width: 1366px) {
+  body {
+    height: 100vh;
+    background-image: url("./assets/images/bg-pattern-top-desktop.svg"), url("./assets/images/bg-pattern-bottom-desktop.svg"); }
+
+  main {
+    width: 80vw;
+    height: 90vh; }
+    main section {
+      height: 50%; }
+    main .main__top {
+      padding: 20px 0;
+      flex-direction: row; }
+      main .main__top .top__header {
+        width: 50%;
+        text-align: left; }
+        main .main__top .top__header h1 {
+          font-size: 3.5rem;
+          padding-right: 25%; }
+        main .main__top .top__header p {
+          font-size: 1.4rem; }
+      main .main__top .top__rates {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+        main .main__top .top__rates div:not(.rates__stars) {
+          width: 85%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px 0; }
+          main .main__top .top__rates div:not(.rates__stars) p {
+            margin-left: 20px; }
+        main .main__top .top__rates :nth-child(2) {
+          align-self: center; }
+        main .main__top .top__rates :nth-child(3) {
+          align-self: end; }
+    main .main__bottom {
+      flex-direction: row;
+      gap: 25px; }
+      main .main__bottom :nth-child(2) {
+        align-self: center; }
+      main .main__bottom :nth-child(3) {
+        align-self: end; }
+      main .main__bottom .bottom__buyer {
+        margin: 0 0 30px;
+        height: 65%; }
+        main .main__bottom .bottom__buyer .buyer__data .data__name {
+          margin-left: 15px; }
+        main .main__bottom .bottom__buyer p {
+          font-size: 1.1rem; } }
+/* 1440 × 900 (medium desktop) */
+@media screen and (min-width: 1440px) {
+  main {
+    width: 85vw; }
+    main .main__top .top__header p {
+      font-size: 1.8rem; }
+    main .main__top .top__rates div:not(.rates__stars) {
+      padding: 25px 0; }
+      main .main__top .top__rates div:not(.rates__stars) p {
+        font-size: 1.6rem; }
+    main .main__bottom .bottom__buyer p {
+      font-size: 1.3rem; } }
+/* 1920 × 1080 (large desktop) */
+@media screen and (min-width: 1920px) {
+  main .main__top .top__header h1 {
+    font-size: 4.3rem;
+    padding-right: 30%; }
+  main .main__top .top__header p {
+    font-size: 2.3rem; }
+  main .main__top .top__rates div:not(.rates__stars) {
+    margin-bottom: 25px; }
+    main .main__top .top__rates div:not(.rates__stars) img {
+      width: 25px; }
+    main .main__top .top__rates div:not(.rates__stars) p {
+      font-size: 2rem; }
+  main .main__bottom .bottom__buyer .buyer__data img {
+    width: 50px; }
+  main .main__bottom .bottom__buyer .buyer__data .data__name {
+    font-size: 1rem; }
+  main .main__bottom .bottom__buyer p {
+    font-size: 1.8rem; } }
+/* Desktops in portrait position  */
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  body {
+    height: 100vh; }
+
+  main {
+    width: 80vw;
+    margin: auto; }
+    main .main__top .top__header h1 {
+      font-size: 3rem; }
+    main .main__top .top__header p {
+      font-size: 1.8rem;
+      margin-top: 25px; }
+    main .main__top .top__rates div img {
+      width: 22px; }
+    main .main__top .top__rates div p {
+      font-size: 1.6rem; }
+    main .main__bottom .bottom__buyer {
+      padding: 30px;
+      margin-top: 20px; }
+      main .main__bottom .bottom__buyer .buyer__data img {
+        width: 40px; }
+      main .main__bottom .bottom__buyer .buyer__data .data__name {
+        font-size: 0.8rem;
+        margin-left: 25px; }
+      main .main__bottom .bottom__buyer p {
+        font-size: 1.5rem; } }
+@media screen and (min-width: 1080px) and (orientation: portrait) {
+  main {
+    width: 80vw; }
+    main .main__top .top__header h1 {
+      font-size: 4rem; }
+    main .main__top .top__header p {
+      font-size: 2.5rem;
+      margin-top: 30px; }
+    main .main__top .top__rates div {
+      padding: 8px 0;
+      margin-top: 15px; }
+      main .main__top .top__rates div img {
+        width: 30px; }
+      main .main__top .top__rates div p {
+        font-size: 2.3rem; }
+    main .main__bottom .bottom__buyer {
+      padding: 30px;
+      margin-top: 20px; }
+      main .main__bottom .bottom__buyer .buyer__data img {
+        width: 55px; }
+      main .main__bottom .bottom__buyer .buyer__data .data__name {
+        font-size: 1.2rem;
+        margin-left: 30px; }
+      main .main__bottom .bottom__buyer p {
+        font-size: 2.3rem; } }
+
+/*# sourceMappingURL=styles.css.map */
